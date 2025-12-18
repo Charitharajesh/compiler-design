@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <string.h>
+
+struct sym {
+    char name[10];
+    int addr;
+} s[5];
+
+int n = 0;
+
+int main() {
+    int ch, i;
+    char key[10];
+
+    while (1) {
+        printf("\n1.Insert 2.Search 3.Modify 4.Exit\n");
+        scanf("%d", &ch);
+
+        if (ch == 1) {
+            printf("Enter name and address: ");
+            scanf("%s %d", s[n].name, &s[n].addr);
+            n++;
+        }
+        else if (ch == 2) {
+            printf("Enter symbol name: ");
+            scanf("%s", key);
+            for (i = 0; i < n; i++)
+                if (strcmp(s[i].name, key) == 0)
+                    printf("Found at address %d\n", s[i].addr);
+        }
+        else if (ch == 3) {
+            printf("Enter symbol name: ");
+            scanf("%s", key);
+            for (i = 0; i < n; i++)
+                if (strcmp(s[i].name, key) == 0) {
+                    printf("Enter new address: ");
+                    scanf("%d", &s[i].addr);
+                }
+        }
+        else break;
+    }
+}
+
+
+
+
+
+sample output
+1.Insert 2.Search 3.Modify 4.Exit
+1
+Enter name and address: a 100
+
+1.Insert 2.Search 3.Modify 4.Exit
+2
+Enter symbol name: a
+Found at address 100
