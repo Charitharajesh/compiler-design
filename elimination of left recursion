@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char prod[2][20];
+    char alpha[20], beta[20];
+
+    printf("Enter productions (Example: A->Aa , A->b)\n");
+    scanf("%s", prod[0]);
+    scanf("%s", prod[1]);
+
+    // Extract α and β
+    strcpy(alpha, prod[0] + 4);  // after A->A
+    strcpy(beta, prod[1] + 3);   // after A->
+
+    printf("\nAfter eliminating left recursion:\n");
+    printf("A -> %sA'\n", beta);
+    printf("A' -> %sA' | ε\n", alpha);
+
+    return 0;
+}
+
+
+output
+After eliminating left recursion:
+A -> bA'
+A' -> aA' | ε
