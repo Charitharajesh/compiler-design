@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char p1[20], p2[20];
+    char common[20];
+    int i = 0;
+
+    printf("Enter first production (Example: A->abc): ");
+    scanf("%s", p1);
+
+    printf("Enter second production (Example: A->abd): ");
+    scanf("%s", p2);
+
+    // Find common prefix
+    while (p1[i] == p2[i] && p1[i] != '\0') {
+        common[i] = p1[i];
+        i++;
+    }
+    common[i] = '\0';
+
+    printf("\nAfter Left Factoring:\n");
+    printf("A -> %sA'\n", common + 3);
+    printf("A' -> %s | %s\n", p1 + i, p2 + i);
+
+    return 0;
+}
+
+sample output
+After Left Factoring:
+A -> aA'
+A' -> bc | bd
