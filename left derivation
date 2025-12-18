@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    printf("Leftmost Derivation for string: id+id\n\n");
+
+    printf("E\n");
+    printf("=> E + T\n");
+    printf("=> T + T\n");
+    printf("=> id + T\n");
+    printf("=> id + id\n");
+
+    return 0;
+}
+
+
+sample output
+Leftmost Derivation for string: id+id
+
+E
+=> E + T
+=> T + T
+=> id + T
+=> id + id
