@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main() {
+    printf("S → (L) / a\n");
+    printf("L → aS L'\n");
+    printf("L' → , S L' | ε\n");
+    return 0;
+}
