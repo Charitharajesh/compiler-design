@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+    printf("S → iEtS S'\n");
+    printf("S' → eS | ε\n");
+    return 0;
+}
+
+
+S → iEtS S'
+S' → eS | ε
