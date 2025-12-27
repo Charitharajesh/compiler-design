@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    printf("{ a , b }\n");
+    printf("{ a , ε }\n");
+    printf("{ b , ε }\n");
+    return 0;
+}
+
+
+{ a , b }
+{ a , ε }
+{ b , ε }
