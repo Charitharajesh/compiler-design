@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int i=0;
+char s[20];
+
+void E(){ if(s[i]=='i') i++; }
+
+int main(){
+    scanf("%s",s);
+    E();
+    if(s[i]=='\0')
+        printf("Accepted");
+    else
+        printf("Rejected");
+}
+
+
+Accepted
