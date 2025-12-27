@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+    printf("MOV A, B\n");
+    printf("ADD A, C\n");
+    return 0;
+}
+
+MOV A, B
+ADD A, C
