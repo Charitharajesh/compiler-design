@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    char a,b;
+    a=getchar();
+    b=getchar();
+    if(a=='/' && b=='/')
+        printf("Single line comment");
+    else if(a=='/' && b=='*')
+        printf("Multi line comment");
+    else
+        printf("Not a comment");
+    return 0;
+}
+
+
+
+Single line comment
