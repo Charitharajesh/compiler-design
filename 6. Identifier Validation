@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char id[20];
+    scanf("%s",id);
+    if(isalpha(id[0]) || id[0]=='_')
+        printf("Valid Identifier");
+    else
+        printf("Invalid Identifier");
+    return 0;
+}
+
+
+Valid Identifier
