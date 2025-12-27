@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char ch;
+    while ((ch = getchar()) != EOF) {
+        if (ch == ' ' || ch == '\n' || ch == '\t') continue;
+        if (isalpha(ch)) printf("ID ");
+        else if (isdigit(ch)) printf("NUM ");
+        else printf("SYM ");
+    }
+    return 0;
+}
+
+
+ID SYM ID SYM NUM
