@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char c;
+    while((c=getchar())!=EOF) {
+        if(isdigit(c))
+            printf("%c ",c);
+    }
+    return 0;
+}
+
+
+1 2 3
